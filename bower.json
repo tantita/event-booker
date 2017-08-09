@@ -1,0 +1,28 @@
+{
+  "name": "event-booker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Olansile Ajibola <ajibolaabdullahi1@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-messages": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "angular-local-storage": "^0.7.1",
+    "angular-google-maps": "^2.4.1",
+    "bootstrap": "^3.3.7",
+    "ng-file-upload-shim": "^12.2.13",
+    "restangular": "^1.6.1"
+  }
+}
