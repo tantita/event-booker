@@ -1,0 +1,64 @@
+
+<h4>Provide your Company Details</h4> <a ng-click="logout();" ng-hide="userLoggedIn">[ Logout ]</a>
+<div class="row">
+    <div class="col-md-12">
+        <p>You have selected stand <b>{{ currentStand.code }}</b>, please update company details.</p>
+        <i>(All fields are mandatory)</i>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary" type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+                accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+            Upload company logo</button>
+        <div>{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+        <span class="progress" ng-show="f.progress >= 0">
+          <div style="width:{{f.progress}}%"
+               ng-bind="f.progress + '%'"></div>
+        </span>
+        </div>
+        <br>
+        {{errorMsg}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+            <input type="hidden" ng-model="currentStandId" />
+            <input type="hidden" ng-model="currentEventId" />
+            <p><input class="form-control" ng-model="companyAdminEmail" placeholder="Company Admin Email..." type="email" required ></p>
+            <p><input class="form-control" ng-model="address" placeholder="Address..." type="text" required></p>
+            <p><input class="form-control" ng-model="email" placeholder="email..." type="email" required></p>
+            <p><input class="form-control" ng-model="phone" placeholder="phone..." type="text" required></p>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary"  ngf-select="uploadDocuments($files, $invalidFiles)" multiple
+                accept="*" ngf-max-height="1000" ngf-max-size="1MB">
+            Upload marketing documents</button>
+        <ul>
+            <li ng-repeat="f in documents" >{{f.name}} {{f.$errorParam}}
+                <span class="progress" ng-show="f.progress >= 0">
+                    <div style='width:{{f.progress}}%' ng-bind="f.progress + '%'"></div>
+                </span>
+            </li>
+            <li ng-repeat="f in errDocuments">{{f.name}} {{f.$error}} {{f.$errorParam}}
+            </li>
+        </ul>
+        {{errorMsgDocuments}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-default" ng-click="stand(currentStand.event_id)">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="save()">Confirm Reservation</button>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+li {
+    padding-bottom: 8px;
+    display: inline;
+    list-style: none;
+}
+
+.angular-google-map-container { height: 400px; }
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+input.ng-invalid {
+    background-color: pink;
+}
+input.ng-valid {
+    background-color: lightgreen;
+}
+.stand_block {
+    border: 3px solid #eee;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.stand_block:hover {
+    border: 3px solid #aaa;
+}
+
+.stand_block img {
+    width: 50%;
+}
+
+.stand_block > p {
+    border-top: 1px solid #eee;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.stand_block .price {
+    font-size: 50px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.logo, .price {
+    height: 100px;
+}
+
+.logo > img {
+    margin-top: -50px;
+    top: 50%;
+    position: relative;
+}
+
+.stand_block.stand_booked strong.code,
+.stand_block.stand_free strong.code {
+    color: #fff;
+    /*border-radius: 50%;*/
+    padding: 10px;
+}
+
+.stand_block.stand_booked strong.code {
+    background: green;
+}
+
+.stand_block.stand_free strong.code {
+    background: gray;
+}

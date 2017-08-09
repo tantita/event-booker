@@ -1,0 +1,18 @@
+<h4>Exposition Events</h4> <a ng-click="logout();" ng-hide="userLoggedIn">[ Logout ]</a>
+<hr>
+<div id="map_canvas">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options" >
+        <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" click="m.click" icon="m.icon" idkey="m.id" ></ui-gmap-marker>
+    </ui-gmap-google-map>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <h3>{{currentEventTitle}}</h3>
+        <p><i><b ng-if="currentEventTitle">Start date: </b>{{currentEventStartDate}}</i></p>
+        <p><i><b ng-if="currentEventTitle">End date: </b>{{currentEventEndDate}}</i></p>
+        <p><i><b ng-if="currentEventTitle">Location: </b>{{currentEventLocation}}</i></p>
+        <p><button type="button" ng-show="currentEventId" class="btn btn-primary" ng-click="bookYourPlace()">Book your place</button></p>
+        <p><button type="button" ng-hide="currentEventId" class="btn btn-primary disabled">Book your place</button></p>
+    </div>
+</div>
