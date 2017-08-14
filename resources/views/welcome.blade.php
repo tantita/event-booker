@@ -39,7 +39,7 @@
 
 </head>
 
-<body>
+<body style="background-color:rgba(242, 242, 240, 0.59);">
 <div class="container">
     <div class="row">
         <a href="#/"><h1>Crossover Virtual Exposition Application</h1></a>
